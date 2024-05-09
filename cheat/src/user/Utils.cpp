@@ -1,5 +1,6 @@
-#include <pch-cheat.h>
+#include <pch-il2cpp.h>
 #include "Utils.h"
+
 #include <iostream>
 #include <TlHelp32.h>
 #include <codecvt>
@@ -261,7 +262,7 @@ std::wstring Utils::to_wstring(const std::string& str)
 
 bool Utils::KeyDown(std::uint16_t vk)
 {
-	const auto hWindow = FindWindowA("UnrealWindow", nullptr);
+	const auto hWindow = FindWindowA("UnityWndClass", nullptr);
 	if (GetForegroundWindow() != hWindow)
 		return false;
 
@@ -270,7 +271,7 @@ bool Utils::KeyDown(std::uint16_t vk)
 
 bool Utils::KeyPressed(std::uint16_t vk)
 {
-	const auto hWindow = FindWindowA("UnrealWindow", nullptr);
+	const auto hWindow = FindWindowA("UnityWndClass", nullptr);
 	if (GetForegroundWindow() != hWindow)
 		return false;
 

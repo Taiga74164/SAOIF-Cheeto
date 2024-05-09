@@ -10,4 +10,15 @@
 // add headers that you want to pre-compile here
 #include "il2cpp-appdata.h"
 
+#include <Windows.h>
+#include <iostream>
+#include <filesystem>
+#include <string>
+#include <vector>
+#include <map>
+#include <unordered_map>
+#include <mutex>
+
+#include "Utils.h"
+
 #endif //PCH_IL2CPP_H

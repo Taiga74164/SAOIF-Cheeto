@@ -10,7 +10,6 @@
 
 #include "il2cpp-metadata-version.h"
 #include "il2cpp-appdata.h"
-#include "Utils.h"
 
 #define IS_SINGLETON_LOADED(className) (/**app::Singleton_1_## className ##___TypeInfo != nullptr &&*/ *app::TSingleton_1_ ## className ## __get_Instance__MethodInfo != nullptr)
 #define GET_SINGLETON(name) IS_SINGLETON_LOADED(name) ? reinterpret_cast<app:: ## name ## *>(app::TSingleton_GetInstance(*app::TSingleton_1_ ## name ## __get_Instance__MethodInfo)) : nullptr

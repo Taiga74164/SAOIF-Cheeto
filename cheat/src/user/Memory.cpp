@@ -1,5 +1,4 @@
-#include <pch-cheat.h>
-
+#include <pch-il2cpp.h>
 #include "Memory.h"
 
 std::unordered_map<void*, Memory::PatchInfo> Memory::patches;

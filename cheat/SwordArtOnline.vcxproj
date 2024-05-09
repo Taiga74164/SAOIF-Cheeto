@@ -11,12 +11,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\appdata\il2cpp-api-functions-ptr.h" />
+    <ClInclude Include="src\appdata\il2cpp-api-functions.h" />
+    <ClInclude Include="src\appdata\il2cpp-functions.h" />
+    <ClInclude Include="src\appdata\il2cpp-metadata-version.h" />
+    <ClInclude Include="src\appdata\il2cpp-types-ptr.h" />
+    <ClInclude Include="src\appdata\il2cpp-types.h" />
     <ClInclude Include="src\framework\helpers.h" />
     <ClInclude Include="src\framework\il2cpp-appdata.h" />
     <ClInclude Include="src\framework\il2cpp-init.h" />
     <ClInclude Include="src\framework\pch-il2cpp.h" />
     <ClInclude Include="src\user\main.h" />
     <ClInclude Include="src\user\Memory.h" />
+    <ClInclude Include="src\user\Singleton.h" />
     <ClInclude Include="src\user\Utils.h" />
   </ItemGroup>
   <ItemGroup>
