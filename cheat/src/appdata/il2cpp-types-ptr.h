@@ -5,5 +5,6 @@
 // * IL2CPP application-specific type definition addresses
 // ******************************************************************************
 
-//DO_TYPEDEF(0x02B600D8, UncheaterManager);
-//DO_TYPEDEF(0x02B60110, UncheaterManager_UncheaterCallback);
+DO_TYPEDEF(0x02B600D8, UncheaterManager);
+DO_TYPEDEF(0x02B60110, UncheaterManager_UncheaterCallback);
+DO_TYPEDEF(0x02B60170, UncheaterVerifyRes);

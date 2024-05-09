@@ -15,39 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\inject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\util.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\load-library.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\manual-map.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\inject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\config.hpp">
+    <ClInclude Include="src\load-library.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vendor\simpleini\SimpleIni.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\inject.h">
+    <ClInclude Include="src\manual-map.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\util.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\load-library.h">
+    <ClInclude Include="src\config.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\manual-map.h">
+    <ClInclude Include="src\inject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

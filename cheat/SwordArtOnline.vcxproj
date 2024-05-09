@@ -21,19 +21,93 @@
     <ClInclude Include="src\framework\il2cpp-appdata.h" />
     <ClInclude Include="src\framework\il2cpp-init.h" />
     <ClInclude Include="src\framework\pch-il2cpp.h" />
+    <ClInclude Include="src\user\base\events\event.hpp" />
+    <ClInclude Include="src\user\base\events\handlers\abstracteventhandler.hpp" />
+    <ClInclude Include="src\user\base\events\handlers\eventhandlerptr.h" />
+    <ClInclude Include="src\user\base\events\handlers\functoreventhandler.hpp" />
+    <ClInclude Include="src\user\base\events\handlers\handlercast.hpp" />
+    <ClInclude Include="src\user\base\events\handlers\helpers\innerholder.hpp" />
+    <ClInclude Include="src\user\base\events\handlers\helpers\objectsaver.hpp" />
+    <ClInclude Include="src\user\base\events\handlers\methodeventhandler.hpp" />
+    <ClInclude Include="src\user\base\events\helpers\is_equatable.hpp" />
+    <ClInclude Include="src\user\base\events\joins\abstracteventjoin.h" />
+    <ClInclude Include="src\user\base\events\joins\eventjoinwrapper.h" />
+    <ClInclude Include="src\user\base\events\joins\eventjoinwrapper.hpp" />
+    <ClInclude Include="src\user\base\events\joins\handlereventjoin.h" />
+    <ClInclude Include="src\user\base\events\joins\handlereventjoin.hpp" />
+    <ClInclude Include="src\user\base\HookManager.h" />
+    <ClInclude Include="src\user\base\Memory.h" />
+    <ClInclude Include="src\user\base\Singleton.h" />
+    <ClInclude Include="src\user\base\Utils.h" />
+    <ClInclude Include="src\user\cheat\cheat.h" />
+    <ClInclude Include="src\user\cheat\features\AntiCheatBypass.h" />
     <ClInclude Include="src\user\main.h" />
-    <ClInclude Include="src\user\Memory.h" />
-    <ClInclude Include="src\user\Singleton.h" />
-    <ClInclude Include="src\user\Utils.h" />
+    <ClInclude Include="vendor\detours\detours.h" />
+    <ClInclude Include="vendor\detours\detver.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="vendor\imgui\imconfig.h" />
+    <ClInclude Include="vendor\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="vendor\imgui\misc\cpp\imgui_stdlib.h" />
+    <ClInclude Include="vendor\json\single_include\nlohmann\json.hpp" />
+    <ClInclude Include="vendor\json\single_include\nlohmann\json_fwd.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_all.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_containers.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_flags.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_format.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_fuse.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_iostream.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_switch.hpp" />
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_utility.hpp" />
+    <ClInclude Include="vendor\UnityResolve\UnityResolve.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\framework\dllmain.cpp" />
     <ClCompile Include="src\framework\helpers.cpp" />
     <ClCompile Include="src\framework\il2cpp-init.cpp" />
     <ClCompile Include="src\framework\pch-il2cpp.cpp" />
+    <ClCompile Include="src\user\base\events\joins\abstracteventjoin.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\user\base\events\joins\eventjoinwrapper.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="src\user\base\Memory.cpp" />
+    <ClCompile Include="src\user\base\Utils.cpp" />
+    <ClCompile Include="src\user\cheat\cheat.cpp" />
+    <ClCompile Include="src\user\cheat\features\AntiCheatBypass.cpp" />
     <ClCompile Include="src\user\main.cpp" />
-    <ClCompile Include="src\user\Memory.cpp" />
-    <ClCompile Include="src\user\Utils.cpp" />
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_win32.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\misc\cpp\imgui_stdlib.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="vendor\detours\detours-x64.lib" />
+    <Library Include="vendor\detours\detours-x86.lib" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -88,7 +162,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\appdata\;$(ProjectDir)src\framework\;$(ProjectDir)src\user\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\appdata\;$(ProjectDir)src\framework\;$(ProjectDir)src\user\;$(ProjectDir)vendor\detours\;$(ProjectDir)vendor\imgui\;$(ProjectDir)vendor\json\single_include\;$(ProjectDir)vendor\magic_enum\include\magic_enum;$(ProjectDir)vendor\UnityResolve;$(ProjectDir)src\user\base\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -113,7 +187,7 @@
       <LanguageStandard_C>stdc17</LanguageStandard_C>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\appdata\;$(ProjectDir)src\framework\;$(ProjectDir)src\user\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\appdata\;$(ProjectDir)src\framework\;$(ProjectDir)src\user\;$(ProjectDir)vendor\detours\;$(ProjectDir)vendor\imgui\;$(ProjectDir)vendor\json\single_include\;$(ProjectDir)vendor\magic_enum\include\magic_enum;$(ProjectDir)vendor\UnityResolve;$(ProjectDir)src\user\base\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

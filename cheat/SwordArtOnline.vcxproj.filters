@@ -13,15 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="vendors">
+      <UniqueIdentifier>{4a98d151-355d-4cda-9ec6-0126d2eb5826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendors\detours">
+      <UniqueIdentifier>{cb148753-2229-46e3-9f60-36164e4c3faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendors\json">
+      <UniqueIdentifier>{b1b35455-07e4-4d5c-a7cb-aacd1ed5f4da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendors\magic_enum">
+      <UniqueIdentifier>{0af5a4d6-2253-4a06-815b-3f354d990ba4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendors\UnityResolve">
+      <UniqueIdentifier>{23614b91-40c5-4ca2-aa1a-0bceb22ddff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendors\imgui">
+      <UniqueIdentifier>{8dc2c624-8f8b-4b3e-bca3-aeddca7746ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\user\main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\user\Utils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\user\Memory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\framework\helpers.h">
@@ -54,8 +66,122 @@
     <ClInclude Include="src\appdata\il2cpp-api-functions-ptr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\user\Singleton.h">
+    <ClInclude Include="src\user\base\events\event.hpp">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\handlers\abstracteventhandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\handlers\eventhandlerptr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\handlers\functoreventhandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\handlers\handlercast.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\handlers\helpers\innerholder.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\handlers\helpers\objectsaver.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\handlers\methodeventhandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\helpers\is_equatable.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\joins\abstracteventjoin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\joins\eventjoinwrapper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\joins\eventjoinwrapper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\joins\handlereventjoin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\events\joins\handlereventjoin.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\HookManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\Memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\base\Singleton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\cheat\cheat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\user\cheat\features\AntiCheatBypass.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\detours\detver.h">
+      <Filter>vendors\detours</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\detours\detours.h">
+      <Filter>vendors\detours</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\json\single_include\nlohmann\json_fwd.hpp">
+      <Filter>vendors\json</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\json\single_include\nlohmann\json.hpp">
+      <Filter>vendors\json</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_fuse.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_iostream.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_switch.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_utility.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_all.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_containers.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_flags.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\magic_enum\include\magic_enum\magic_enum_format.hpp">
+      <Filter>vendors\magic_enum</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\UnityResolve\UnityResolve.hpp">
+      <Filter>vendors\UnityResolve</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imconfig.h">
+      <Filter>vendors\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui.h">
+      <Filter>vendors\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\imgui_internal.h">
+      <Filter>vendors\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_win32.h">
+      <Filter>vendors\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\imgui\misc\cpp\imgui_stdlib.h">
+      <Filter>vendors\imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -63,12 +189,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\user\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\user\Utils.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\user\Memory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\framework\il2cpp-init.cpp">
@@ -80,5 +200,49 @@
     <ClCompile Include="src\framework\helpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\user\base\Memory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\base\Utils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\base\events\joins\eventjoinwrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\base\events\joins\abstracteventjoin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\cheat\cheat.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\user\cheat\features\AntiCheatBypass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp">
+      <Filter>vendors\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui.cpp">
+      <Filter>vendors\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp">
+      <Filter>vendors\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp">
+      <Filter>vendors\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_win32.cpp">
+      <Filter>vendors\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\imgui\misc\cpp\imgui_stdlib.cpp">
+      <Filter>vendors\imgui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="vendor\detours\detours-x64.lib">
+      <Filter>vendors\detours</Filter>
+    </Library>
+    <Library Include="vendor\detours\detours-x86.lib">
+      <Filter>vendors\detours</Filter>
+    </Library>
   </ItemGroup>
 </Project>

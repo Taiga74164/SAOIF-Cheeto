@@ -6,6 +6,7 @@
 
 enum LogLevel
 {
+	Info,
 	Debug,
 	Error,
 	Warning
@@ -18,6 +19,7 @@ enum LogType
 };
 
 #define LOG(fmt, ...)   Utils::ConsolePrint(__FILE__, __LINE__, fmt, __VA_ARGS__)
+#define LOG_INFO(fmt, ...)   Utils::Log(__FILE__, __LINE__, LogLevel::Info, fmt, __VA_ARGS__)
 #define LOG_DEBUG(fmt, ...)   Utils::Log(__FILE__, __LINE__, LogLevel::Debug, fmt, __VA_ARGS__)
 #define LOG_ERROR(fmt, ...)   Utils::Log(__FILE__, __LINE__, LogLevel::Error, fmt, __VA_ARGS__)
 #define LOG_WARNING(fmt, ...) Utils::Log(__FILE__, __LINE__, LogLevel::Warning, fmt, __VA_ARGS__)

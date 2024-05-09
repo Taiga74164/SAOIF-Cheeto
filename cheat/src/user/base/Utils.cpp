@@ -119,6 +119,10 @@ void Utils::Log(const char* filepath, int line, LogLevel level, const char* fmt,
 	// Determine log level string and corresponding color
 	switch (level)
 	{
+	case Info:
+		levelStr = "Info";
+		levelColor = FOREGROUND_GREEN | FOREGROUND_INTENSITY; // Lighter Green
+		break;
 	case Debug:
 		levelStr = "Debug";
 		levelColor = FOREGROUND_BLUE | FOREGROUND_RED | FOREGROUND_INTENSITY; // Magenta

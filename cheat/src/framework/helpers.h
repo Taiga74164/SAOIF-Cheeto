@@ -11,13 +11,16 @@
 #include "il2cpp-metadata-version.h"
 #include "il2cpp-appdata.h"
 
-#define IS_SINGLETON_LOADED(className) (/**app::Singleton_1_## className ##___TypeInfo != nullptr &&*/ *app::TSingleton_1_ ## className ## __get_Instance__MethodInfo != nullptr)
-#define GET_SINGLETON(name) IS_SINGLETON_LOADED(name) ? reinterpret_cast<app:: ## name ## *>(app::TSingleton_GetInstance(*app::TSingleton_1_ ## name ## __get_Instance__MethodInfo)) : nullptr
-#define GET_SINGLETON_1(name) IS_SINGLETON_LOADED(name) ? reinterpret_cast<app:: ## name ## *>(app::TSingleton_1_System_Object__get_Instance(*app::TSingleton_1_ ## name ## __get_Instance__MethodInfo)) : nullptr
+#define GET_SINGLETON(name) app::Singleton_1_SAO_Game_## name ##__get_Instance(*app::Singleton_1_SAO_Game_## name ##__get_Instance__MethodInfo)
+
+#define INIT_ILCPP_CLASS(className, expr) (il2cpp_runtime_class_init(reinterpret_cast<Il2CppClass*>(*app::## className ##__TypeInfo)), expr)
+#define GET_STATIC_FIELDS(tpname) INIT_ILCPP_CLASS(tpname, (*app::## tpname ##__TypeInfo)->static_fields)
+
+
 
 #define SAFE_BEGIN() __try {
 #define SAFE_ERROR() } __except (EXCEPTION_EXECUTE_HANDLER) { \
-    LOG_ERROR("Exception 0x%08x.", GetExceptionCode());
+    LOG_WARNING("Exception 0x%08x.", GetExceptionCode());
 
 #define SAFE_END() }
 #define SAFE_EEND() SAFE_ERROR(); SAFE_END();

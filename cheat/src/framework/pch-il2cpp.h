@@ -19,6 +19,12 @@
 #include <unordered_map>
 #include <mutex>
 
-#include "Utils.h"
+#include <nlohmann/json.hpp>
+#include <magic_enum.hpp>
+#include <imgui.h>
+
+#include <Utils.h>
+#include <Memory.h>
+#include <HookManager.h>
 
 #endif //PCH_IL2CPP_H

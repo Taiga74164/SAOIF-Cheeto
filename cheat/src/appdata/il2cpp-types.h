@@ -2436,16 +2436,30 @@ namespace app
 		uint8_t fields;
 	};
 
-	struct SByte
+	struct Byte__Array
 	{
-		int8_t m_value;
+		struct Byte__Array__Class* klass;
+		MonitorData* monitor;
+		Il2CppArrayBounds* bounds;
+		il2cpp_array_size_t max_length;
+		uint8_t vector[32];
 	};
 
-	struct SByte__Boxed
+	struct __declspec(align(8)) Encoding__Fields
 	{
-		struct SByte__Class* klass;
+		int32_t m_codePage;
+		struct CodePageDataItem* dataItem;
+		bool m_deserializedFromEverett;
+		bool m_isReadOnly;
+		struct EncoderFallback* encoderFallback;
+		struct DecoderFallback* decoderFallback;
+	};
+
+	struct Encoding
+	{
+		struct Encoding__Class* klass;
 		MonitorData* monitor;
-		int8_t fields;
+		struct Encoding__Fields fields;
 	};
 
 	struct Int16
@@ -2850,7 +2864,383 @@ namespace app
 		float z;
 	};
 
+	struct __declspec(align(8)) Object_1__Fields
+	{
+		void* m_CachedPtr;
+	};
 
+	struct Object_1
+	{
+		struct Object_1__Class* klass;
+		MonitorData* monitor;
+		struct Object_1__Fields fields;
+	};
+
+	struct Component_1__Fields
+	{
+		struct Object_1__Fields _;
+	};
+
+	struct Component_1
+	{
+		struct Component_1__Class* klass;
+		MonitorData* monitor;
+		struct Component_1__Fields fields;
+	};
+
+	struct Behaviour__Fields
+	{
+		struct Component_1__Fields _;
+	};
+
+	struct Behaviour
+	{
+		struct Behaviour__Class* klass;
+		MonitorData* monitor;
+		struct Behaviour__Fields fields;
+	};
+
+	struct MonoBehaviour__Fields
+	{
+		struct Behaviour__Fields _;
+	};
+
+	struct MonoBehaviour
+	{
+		struct MonoBehaviour__Class* klass;
+		MonitorData* monitor;
+		struct MonoBehaviour__Fields fields;
+	};
+
+	struct UncheaterManager__Fields
+	{
+		struct MonoBehaviour__Fields _;
+		struct System_1* uncheater;
+		struct Callback* ucb_;
+	};
+
+	struct UncheaterManager
+	{
+		struct UncheaterManager__Class* klass;
+		MonitorData* monitor;
+		struct UncheaterManager__Fields fields;
+	};
+
+	struct UncheaterManager__VTable
+	{
+		VirtualInvokeData Equals;
+		VirtualInvokeData Finalize;
+		VirtualInvokeData GetHashCode;
+		VirtualInvokeData ToString;
+	};
+
+	struct UncheaterManager__StaticFields
+	{
+		bool isQuit;
+		struct String* DirectoryPath;
+	};
+
+	struct UncheaterManager__Class
+	{
+		Il2CppClass_0 _0;
+		Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+		struct UncheaterManager__StaticFields* static_fields;
+		const Il2CppRGCTXData* rgctx_data;
+		Il2CppClass_1 _1;
+		struct UncheaterManager__VTable vtable;
+	};
+
+	struct UncheaterManager_UncheaterCallback
+	{
+		struct UncheaterManager_UncheaterCallback__Class* klass;
+		MonitorData* monitor;
+	};
+
+	struct UncheaterManager_UncheaterCallback__VTable
+	{
+		VirtualInvokeData Equals;
+		VirtualInvokeData Finalize;
+		VirtualInvokeData GetHashCode;
+		VirtualInvokeData ToString;
+		VirtualInvokeData OnSend;
+		VirtualInvokeData OnHackDetected;
+		VirtualInvokeData OnGetUserInfo;
+	};
+
+	struct UncheaterManager_UncheaterCallback__StaticFields
+	{
+	};
+
+	struct UncheaterManager_UncheaterCallback__Class
+	{
+		Il2CppClass_0 _0;
+		Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+		struct UncheaterManager_UncheaterCallback__StaticFields* static_fields;
+		const Il2CppRGCTXData* rgctx_data;
+		Il2CppClass_1 _1;
+		struct UncheaterManager_UncheaterCallback__VTable vtable;
+	};
+
+	enum class eConnection__Enum : int32_t
+	{
+		Non = 0x00000000,
+		Connect = 0x00000001,
+		Environment = 0x00000002,
+		Authenticate = 0x00000003,
+		AuthenticateWait = 0x00000004,
+		AuthenticateFail = 0x00000005,
+		ServerStop = 0x00000006,
+		Login = 0x00000007,
+		LoginWait = 0x00000008,
+		LoginFail = 0x00000009,
+		LogionDouble = 0x0000000a,
+		CharacterCreate = 0x0000000b,
+		CharacterCreateFail = 0x0000000c,
+		Disconnect = 0x0000000d,
+		Error = 0x0000000e,
+		Failed = 0x0000000f,
+	};
+
+	struct ClientSocket__Fields
+	{
+		struct MonoBehaviour__Fields _;
+		float WAIT_ERROR_TIME;
+		struct String* _ServerIP_k__BackingField;
+		int32_t _ServerPort_k__BackingField;
+		struct TcpConnection* m_tcp;
+		eConnection__Enum _ConnectStatus_k__BackingField;
+		struct String* m_cookie;
+		float pingTime;
+		float warningInterval;
+		bool isRequestMonsterHp;
+		struct List_1_SAO_Network_Packet_ProtegeData_* protegeList;
+	};
+
+	struct ClientSocket
+	{
+		struct ClientSocket__Class* klass;
+		MonitorData* monitor;
+		struct ClientSocket__Fields fields;
+	};
+
+	struct Singleton_1_SAO_Game_GameManager___Fields
+	{
+		struct MonoBehaviour__Fields _;
+	};
+
+	struct Singleton_1_SAO_Game_GameManager_
+	{
+		struct Singleton_1_SAO_Game_GameManager___Class* klass;
+		MonitorData* monitor;
+		struct Singleton_1_SAO_Game_GameManager___Fields fields;
+	};
+
+	struct WatchModeInfoStruct
+	{
+		bool _IsWatchMode_k__BackingField;
+		bool _IsVRMode_k__BackingField;
+		int32_t _DungeonId_k__BackingField;
+		int32_t _ParentId_k__BackingField;
+		int32_t _ChildId_k__BackingField;
+	};
+
+	enum eGameStatus__Enum
+	{
+		eGameStatus__Enum_None = 0x00000000,
+		eGameStatus__Enum_Init = 0x00000001,
+		eGameStatus__Enum_Loading = 0x00000002,
+		eGameStatus__Enum_Login = 0x00000003,
+		eGameStatus__Enum_WaitField = 0x00000004,
+		eGameStatus__Enum_StartEvent = 0x00000005,
+		eGameStatus__Enum_Game = 0x00000006,
+		eGameStatus__Enum_ChangeField = 0x00000007,
+		eGameStatus__Enum_RunScript = 0x00000008,
+		eGameStatus__Enum_WaitChangeServer = 0x00000009,
+		eGameStatus__Enum_WaitError = 0x0000000a,
+		eGameStatus__Enum_Reconnect = 0x0000000b,
+		eGameStatus__Enum_ExitGame = 0x0000000c,
+	};
+
+	struct GameManager__Fields
+	{
+		struct Singleton_1_SAO_Game_GameManager___Fields _;
+		bool isBurstNoTimeLimit;
+		bool isBurstNoVanish;
+		bool _IsRunningBurst_k__BackingField;
+		int32_t _NowBurstSkillID_k__BackingField;
+		struct GameManager_AttributeSet__Array* burstSkillAttribute;
+		bool _IsBurstAcceptable_k__BackingField;
+		float burstWaitTime;
+		struct UInt32__Array* elementColor;
+		struct Coroutine* burstCoroutine;
+		float cameraFov;
+		float cameraHeight;
+		struct Queue_1_SAO_Network_Packet_FullBurstSkillActiveTimeEvent_* FullBurstStatusQueue;
+		bool IsChargeLoginBonus;
+		struct Action* _InputChat_OnDebugCommandFinishCallback_k__BackingField;
+		struct Dictionary_2_System_Int32_List_1_System_Int32_* m_WeaponTypeSkillList;
+		int32_t m_defaultFieldID;
+		int32_t m_OffLineStartFieldID;
+		int32_t m_createCharacterArea;
+		struct String* PREF_CREATECHARACTER;
+		struct CharacterManager* m_characterManager;
+		struct CameraManager* m_cameraManager;
+		struct PostEffectManager* m_posteffectManager;
+		struct FieldMapData* m_fieldMapData;
+		struct TargetManager* m_TargetManager;
+		int32_t m_nextFieldID;
+		int32_t m_fieldID;
+		struct WatchModeInfoStruct watchModeInfo;
+		int32_t afterFieldChangeDialogMessage;
+		struct HUDManager* m_HUDManager;
+		struct EventManager* m_EventManager;
+		struct EventScriptManager* m_EventScriptManager;
+		struct Event2D_Controller* m_Event2D_Controller;
+		struct ActivatePointDataStore* m_ActivatePointDataStore;
+		struct FieldObjectManager* m_FieldObjectManager;
+		struct QuestUIManager* m_QuestUIManager;
+		struct AreaObjectManager* m_AreaObjectManager;
+		struct GroupManager* m_groupManager;
+		struct NoticeManager* m_noticeManager;
+		struct TargetManager* _TargetManager_k__BackingField;
+		struct OtherPlayerProfileManager* m_OtherPlayerProfileManager;
+		struct Area_UI* m_Area_UI;
+		struct ActivatePoint_UI* m_ActivatePoint_UI;
+		struct InitProfile* m_InitProfile;
+		struct Player_EditName_UI* m_Player_EditName_UI;
+		struct Partner_EditName_UI* m_Partner_EditName_UI;
+		struct ContactListManager* m_ContactListManager;
+		struct GuildManager* m_GuildManager;
+		struct PanelMissionManager* m_PanelMissionManager;
+		struct AssistPartySelectManager* m_AssistPartySelectManager;
+		struct WidgetHelpUI* m_WidgetHelpUI;
+		struct GdprManager* m_GdprManager;
+		struct GameObject* announceObj;
+		struct AnnounceManager* AnnounceManager;
+		struct GameObject* m_BurstSkillCutin;
+		struct AdviceSystem* m_Advice;
+		struct WebViewWindow* m_webviewWindow;
+		bool isLoginFlag;
+		struct Action* m_WebviewCloseCallback;
+		struct Coroutine* dlTips;
+		bool isNewPlayerDailyLogin;
+		eGameStatus__Enum _GameStatus_k__BackingField;
+		bool _IsMiniGame_k__BackingField;
+		bool _IsFieldChange_k__BackingField;
+		struct Coroutine* fieldChangeCoroutine;
+		bool waitChangeServer;
+		struct ChangeServerEvent* changeServerInfo;
+		float waitChangeServerTime;
+		bool m_receiveMobList;
+		bool m_firstFieldChange;
+		struct Action* _OnCreateCharacterEnd_k__BackingField;
+		bool _IsCreateCharacter_k__BackingField;
+		bool _IsNetworkMode_k__BackingField;
+		struct ClientSocket* m_client;
+		float RECONNECT_WAIT_TIME;
+		int32_t m_paletPage;
+		int32_t m_weaponCategory;
+		int32_t m_subCategory;
+		struct Vector3 ForCharaCreatePos;
+		bool m_playerInfoFlag;
+		bool m_afterLoginProcessFlag;
+		bool IsGashaProcessing;
+		bool IsMakedId;
+		struct BowGauge* bowGauge;
+		struct Int32__Array* bowMag;
+		bool m_switchButtonPushing;
+		float buffUpdateTime;
+		bool execReturnEvent;
+		bool waitReturnEvent;
+		bool openFreeGacha;
+		bool autoEventStart;
+		bool requestDisplayRankingNotice;
+		bool exitAndReboot;
+		int32_t _FieldPopID_k__BackingField;
+		struct Vector3 _FieldPopPosition_k__BackingField;
+		bool _FieldPopPositionNotConvertFlag_k__BackingField;
+		uint16_t PlayerHeightX;
+		uint16_t PlayerHeightZ;
+		bool _ReceivedAssistCharacterEquipCard_k__BackingField;
+		struct List_1_SAO_Game_GameManager_SystemMessage_* m_systemMessage;
+		struct Action_1_Int32_* UseItemAction;
+		bool isInitEnd;
+		bool isPushingAttack;
+		bool isUnpushAttack;
+		int32_t isPushingSkill;
+		int32_t isUnpushSkill;
+		int32_t isPushingSkillOld;
+		struct DialogRequest* errDialog;
+		struct DateTime pauseTime;
+		float SEND_INTERVAL;
+		float SEND_INTERVAL_PRIVATE;
+		float SEND_NOMOVE_INTERVAL;
+		float m_sendInterval;
+		int32_t storeDamageHp;
+		bool IsCheckingPending;
+		bool IsCheckedPending;
+		int32_t m_sendSkillID;
+		struct Vector3 oldPos;
+		struct DialogRequest* WatchEndDialog;
+		float WatchEndTime;
+		int32_t sendCount;
+	};
+
+	struct GameManager
+	{
+		struct GameManager__Class* klass;
+		MonitorData* monitor;
+		struct GameManager__Fields fields;
+	};
+
+	struct __declspec(align(8)) UncheaterVerifyRes__Fields
+	{
+		struct String* client_cookie;
+	};
+
+	struct UncheaterVerifyRes
+	{
+		struct UncheaterVerifyRes__Class* klass;
+		MonitorData* monitor;
+		struct UncheaterVerifyRes__Fields fields;
+	};
+
+	struct UncheaterVerifyRes__VTable
+	{
+		VirtualInvokeData Equals;
+		VirtualInvokeData Finalize;
+		VirtualInvokeData GetHashCode;
+		VirtualInvokeData ToString;
+		VirtualInvokeData get_PacketId;
+		VirtualInvokeData Export;
+		VirtualInvokeData Import;
+	};
+
+	struct UncheaterVerifyRes__StaticFields
+	{
+	};
+
+	struct UncheaterVerifyRes__Class
+	{
+		Il2CppClass_0 _0;
+		Il2CppRuntimeInterfaceOffsetPair* interfaceOffsets;
+		struct UncheaterVerifyRes__StaticFields* static_fields;
+		const Il2CppRGCTXData* rgctx_data;
+		Il2CppClass_1 _1;
+		struct UncheaterVerifyRes__VTable vtable;
+	};
+
+	struct __declspec(align(8)) EnumElementAttribute__Fields
+	{
+		struct String* _DisplayName_k__BackingField;
+	};
+
+	struct EnumElementAttribute
+	{
+		struct EnumElementAttribute__Class* klass;
+		MonitorData* monitor;
+		struct EnumElementAttribute__Fields fields;
+	};
 
 #if !defined(_GHIDRA_) && !defined(_IDA_) && !defined(_IDACLANG_)
 }
